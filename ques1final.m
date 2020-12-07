@@ -1,0 +1,34 @@
+century = imread('century.jpg');
+%century = imresize(century,[64,64]);
+century = reduce(century);
+century = reduce(century);
+century = reduce(century);
+century = reduce(century);
+figure(1); imshow(century);
+century = im2double(century);
+newImg = century;
+out1 = BilateralFilter(newImg);
+figure(2);imshow(out1);
+
+frenchfries = imread('frenchfries.jpg');
+%frenchfries = imresize(frenchfries,[64,64]);
+frenchfries = reduce(frenchfries);
+frenchfries = reduce(frenchfries);
+frenchfries = reduce(frenchfries);
+frenchfries = reduce(frenchfries);
+figure(3); imshow(frenchfries);
+frenchfries = im2double(frenchfries);
+newImg = frenchfries;
+out1 = BilateralFilter(newImg);
+figure(4);imshow(out1);
+
+face = imread('eyenew1.jpg');
+%face = imresize(face,[64,64]);
+face = reduce(face);
+face = reduce(face);
+face = reduce(face);face = reduce(face);
+figure(5); imshow(face);
+face = im2double(face);
+newImg = face;
+out1 = BilateralFilter(newImg);
+figure(6);imshow(out1);
